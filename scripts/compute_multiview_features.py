@@ -36,6 +36,7 @@ class EnetDataset(Dataset):
         scene_id, frame_id = self.data[idx]
         image = self._load_image(SCANNET_FRAME_PATH.format(scene_id, "color", "{}.jpg".format(frame_id)), [328, 256])
 
+
         return scene_id, frame_id, image
 
     def _init_resources(self):

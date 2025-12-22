@@ -45,6 +45,14 @@ def get_dataloader(args, scanrefer, all_scene_list, split, config, augment):
 def get_model(args):
     # initiate model
     input_channels = int(args.use_multiview) * 128 + int(args.use_normal) * 3 + int(args.use_color) * 3 + int(not args.no_height)
+    bundle_cfg = {
+        "knn_k": args.bundle_knn,
+        "diffusion_steps": args.bundle_diffusion_steps,
+        "diffusion_alpha": args.bundle_diffusion_alpha,
+        "hidden_size": args.bundle_hidden_size,
+        "hyper_hidden": args.bundle_hyper_hidden
+    }
+
     model = RefNet(
         num_class=DC.num_class,
         num_heading_bin=DC.num_heading_bin,
@@ -54,7 +62,8 @@ def get_model(args):
         num_proposal=args.num_proposals,
         use_lang_classifier=(not args.no_lang_cls),
         use_bidir=args.use_bidir,
-        no_reference=args.no_reference
+        no_reference=args.no_reference,
+        bundle_cfg=bundle_cfg
     )
 
     # trainable model
@@ -256,6 +265,11 @@ if __name__ == "__main__":
     parser.add_argument("--use_bidir", action="store_true", help="Use bi-directional GRU.")
     parser.add_argument("--use_pretrained", type=str, help="Specify the folder name containing the pretrained detection module.")
     parser.add_argument("--use_checkpoint", type=str, help="Specify the checkpoint root", default="")
+    parser.add_argument("--bundle_knn", type=int, default=16, help="K for bundle KNN graph")
+    parser.add_argument("--bundle_diffusion_steps", type=int, default=3, help="Number of diffusion iterations")
+    parser.add_argument("--bundle_diffusion_alpha", type=float, default=0.5, help="Residual weight for diffusion update")
+    parser.add_argument("--bundle_hidden_size", type=int, default=128, help="Hidden size for bundle projection head")
+    parser.add_argument("--bundle_hyper_hidden", type=int, default=128, help="Hidden size for hyper-network")
     args = parser.parse_args()
 
     # setting
@@ -269,4 +283,3 @@ if __name__ == "__main__":
     np.random.seed(args.seed)
 
     train(args)
-    

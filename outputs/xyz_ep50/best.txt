@@ -1,0 +1,14 @@
+
+--------------------------------------best--------------------------------------
+[best] epoch: 44
+[loss] loss: 14.50658
+[loss] ref_loss: 4.47342
+[loss] lang_loss: 0.0
+[loss] objectness_loss: 0.20084
+[loss] vote_loss: 0.48291
+[loss] box_loss: 0.30155
+[loss] lang_acc: 0.0
+[sco.] ref_acc: 0.12846
+[sco.] obj_acc: 0.86883
+[sco.] pos_ratio: 0.2429, neg_ratio: 0.37463
+[sco.] iou_rate_0.25: 0.33427, iou_rate_0.5: 0.20363
