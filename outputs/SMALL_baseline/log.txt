@@ -1,0 +1,566 @@
+epoch 1 starting...
+best iou_rate_0.5 achieved: 0.0
+current train_loss: 40.403045654296875
+current val_loss: 28.333797659649946
+saving best models...
+
+epoch [1/5] done...
+
+---------------------------------summary---------------------------------
+[train] train_loss: 40.40305
+[train] train_ref_loss: 5.78124
+[train] train_lang_loss: 2.83684
+[train] train_objectness_loss: 0.17835
+[train] train_vote_loss: 1.23863
+[train] train_box_loss: 1.54023
+[train] train_lang_acc: 0.07812
+[train] train_ref_acc: 0.0
+[train] train_obj_acc: 0.46186
+[train] train_pos_ratio: 0.05664, train_neg_ratio: 0.69861
+[train] train_iou_rate_0.25: 0.0, train_iou_rate_0.5: 0.0
+[val]   val_loss: 28.3338
+[val]   val_ref_loss: 5.54517
+[val]   val_lang_loss: 2.74186
+[val]   val_objectness_loss: 0.19889
+[val]   val_vote_loss: 0.96466
+[val]   val_box_loss: 0.64767
+[val]   val_lang_acc: 0.31078
+[val]   val_ref_acc: 0.00262
+[val]   val_obj_acc: 0.85342
+[val]   val_pos_ratio: 0.09832, val_neg_ratio: 0.57788
+[val]   val_iou_rate_0.25: 0.00231, val_iou_rate_0.5: 0.0
+
+
+-------------------------------iter: [1: 10/255]-------------------------------
+[loss] train_loss: 32.64752
+[loss] train_ref_loss: 5.6487
+[loss] train_lang_loss: 2.56046
+[loss] train_objectness_loss: 0.15964
+[loss] train_vote_loss: 1.12035
+[loss] train_box_loss: 0.96652
+[loss] train_lang_acc: 0.25781
+[sco.] train_ref_acc: 0.0
+[sco.] train_obj_acc: 0.73228
+[sco.] train_pos_ratio: 0.07058, train_neg_ratio: 0.65089
+[sco.] train_iou_rate_0.25: 0.0, train_iou_rate_0.5: 0.0
+[info] mean_fetch_time: 0.61707s
+[info] mean_forward_time: 0.33759s
+[info] mean_backward_time: 0.38948s
+[info] mean_eval_time: 0.0284s
+[info] mean_iter_time: 1.37255s
+[info] ETA: 0h 7m 58s
+
+
+-------------------------------iter: [1: 20/255]-------------------------------
+[loss] train_loss: 29.36163
+[loss] train_ref_loss: 5.60142
+[loss] train_lang_loss: 2.49766
+[loss] train_objectness_loss: 0.16351
+[loss] train_vote_loss: 0.99327
+[loss] train_box_loss: 0.79794
+[loss] train_lang_acc: 0.26875
+[sco.] train_ref_acc: 0.00078
+[sco.] train_obj_acc: 0.76904
+[sco.] train_pos_ratio: 0.08918, train_neg_ratio: 0.59588
+[sco.] train_iou_rate_0.25: 0.00156, train_iou_rate_0.5: 0.0
+[info] mean_fetch_time: 0.57662s
+[info] mean_forward_time: 0.31482s
+[info] mean_backward_time: 0.37998s
+[info] mean_eval_time: 0.02831s
+[info] mean_iter_time: 1.29973s
+[info] ETA: 0h 7m 18s
+
+
+-------------------------------iter: [1: 30/255]-------------------------------
+[loss] train_loss: 27.52654
+[loss] train_ref_loss: 5.55713
+[loss] train_lang_loss: 2.4634
+[loss] train_objectness_loss: 0.17007
+[loss] train_vote_loss: 0.91851
+[loss] train_box_loss: 0.70999
+[loss] train_lang_acc: 0.27344
+[sco.] train_ref_acc: 0.0026
+[sco.] train_obj_acc: 0.75802
+[sco.] train_pos_ratio: 0.10562, train_neg_ratio: 0.55488
+[sco.] train_iou_rate_0.25: 0.00208, train_iou_rate_0.5: 0.0
+[info] mean_fetch_time: 0.55483s
+[info] mean_forward_time: 0.30714s
+[info] mean_backward_time: 0.37677s
+[info] mean_eval_time: 0.0283s
+[info] mean_iter_time: 1.26704s
+[info] ETA: 0h 6m 53s
+
+
+-------------------------------iter: [1: 40/255]-------------------------------
+[loss] train_loss: 26.29972
+[loss] train_ref_loss: 5.50445
+[loss] train_lang_loss: 2.45524
+[loss] train_objectness_loss: 0.17237
+[loss] train_vote_loss: 0.87247
+[loss] train_box_loss: 0.65147
+[loss] train_lang_acc: 0.27148
+[sco.] train_ref_acc: 0.00391
+[sco.] train_obj_acc: 0.74407
+[sco.] train_pos_ratio: 0.1191, train_neg_ratio: 0.52699
+[sco.] train_iou_rate_0.25: 0.00547, train_iou_rate_0.5: 0.0
+[info] mean_fetch_time: 0.54412s
+[info] mean_forward_time: 0.30324s
+[info] mean_backward_time: 0.37517s
+[info] mean_eval_time: 0.02829s
+[info] mean_iter_time: 1.25082s
+[info] ETA: 0h 6m 35s
+
+
+-------------------------------iter: [1: 50/255]-------------------------------
+[loss] train_loss: 25.40115
+[loss] train_ref_loss: 5.44212
+[loss] train_lang_loss: 2.43851
+[loss] train_objectness_loss: 0.17315
+[loss] train_vote_loss: 0.84032
+[loss] train_box_loss: 0.61204
+[loss] train_lang_acc: 0.27594
+[sco.] train_ref_acc: 0.00594
+[sco.] train_obj_acc: 0.73386
+[sco.] train_pos_ratio: 0.12918, train_neg_ratio: 0.50625
+[sco.] train_iou_rate_0.25: 0.00688, train_iou_rate_0.5: 0.00094
+[info] mean_fetch_time: 0.5376s
+[info] mean_forward_time: 0.30057s
+[info] mean_backward_time: 0.37397s
+[info] mean_eval_time: 0.02826s
+[info] mean_iter_time: 1.24041s
+[info] ETA: 0h 6m 19s
+
+saving last models...
+
+epoch 2 starting...
+
+-------------------------------iter: [2: 60/255]-------------------------------
+[loss] train_loss: 21.17096
+[loss] train_ref_loss: 5.09514
+[loss] train_lang_loss: 2.19934
+[loss] train_objectness_loss: 0.17097
+[loss] train_vote_loss: 0.70685
+[loss] train_box_loss: 0.43499
+[loss] train_lang_acc: 0.34375
+[sco.] train_ref_acc: 0.0191
+[sco.] train_obj_acc: 0.69762
+[sco.] train_pos_ratio: 0.17299, train_neg_ratio: 0.42641
+[sco.] train_iou_rate_0.25: 0.03646, train_iou_rate_0.5: 0.00521
+[info] mean_fetch_time: 0.59472s
+[info] mean_forward_time: 0.29569s
+[info] mean_backward_time: 0.37245s
+[info] mean_eval_time: 0.02867s
+[info] mean_iter_time: 1.29154s
+[info] ETA: 0h 6m 24s
+
+
+-------------------------------iter: [2: 70/255]-------------------------------
+[loss] train_loss: 20.76464
+[loss] train_ref_loss: 5.04541
+[loss] train_lang_loss: 2.206
+[loss] train_objectness_loss: 0.16754
+[loss] train_vote_loss: 0.68864
+[loss] train_box_loss: 0.42286
+[loss] train_lang_acc: 0.33553
+[sco.] train_ref_acc: 0.01809
+[sco.] train_obj_acc: 0.71268
+[sco.] train_pos_ratio: 0.17912, train_neg_ratio: 0.41712
+[sco.] train_iou_rate_0.25: 0.03701, train_iou_rate_0.5: 0.00329
+[info] mean_fetch_time: 0.55127s
+[info] mean_forward_time: 0.29491s
+[info] mean_backward_time: 0.37212s
+[info] mean_eval_time: 0.02863s
+[info] mean_iter_time: 1.24694s
+[info] ETA: 0h 5m 56s
+
+
+-------------------------------iter: [2: 80/255]-------------------------------
+[loss] train_loss: 20.58227
+[loss] train_ref_loss: 5.04491
+[loss] train_lang_loss: 2.20166
+[loss] train_objectness_loss: 0.16693
+[loss] train_vote_loss: 0.68285
+[loss] train_box_loss: 0.41527
+[loss] train_lang_acc: 0.3389
+[sco.] train_ref_acc: 0.01886
+[sco.] train_obj_acc: 0.7148
+[sco.] train_pos_ratio: 0.18173, train_neg_ratio: 0.41446
+[sco.] train_iou_rate_0.25: 0.03825, train_iou_rate_0.5: 0.00485
+[info] mean_fetch_time: 0.53503s
+[info] mean_forward_time: 0.29469s
+[info] mean_backward_time: 0.37148s
+[info] mean_eval_time: 0.02866s
+[info] mean_iter_time: 1.22987s
+[info] ETA: 0h 5m 38s
+
+
+-------------------------------iter: [2: 90/255]-------------------------------
+[loss] train_loss: 20.49456
+[loss] train_ref_loss: 5.05385
+[loss] train_lang_loss: 2.20667
+[loss] train_objectness_loss: 0.16603
+[loss] train_vote_loss: 0.68191
+[loss] train_box_loss: 0.40964
+[loss] train_lang_acc: 0.33333
+[sco.] train_ref_acc: 0.01763
+[sco.] train_obj_acc: 0.71591
+[sco.] train_pos_ratio: 0.18323, train_neg_ratio: 0.41361
+[sco.] train_iou_rate_0.25: 0.03566, train_iou_rate_0.5: 0.00521
+[info] mean_fetch_time: 0.52847s
+[info] mean_forward_time: 0.29665s
+[info] mean_backward_time: 0.37433s
+[info] mean_eval_time: 0.02922s
+[info] mean_iter_time: 1.22867s
+[info] ETA: 0h 5m 25s
+
+
+-------------------------------iter: [2: 100/255]-------------------------------
+[loss] train_loss: 20.23996
+[loss] train_ref_loss: 5.02464
+[loss] train_lang_loss: 2.18666
+[loss] train_objectness_loss: 0.16394
+[loss] train_vote_loss: 0.67366
+[loss] train_box_loss: 0.40132
+[loss] train_lang_acc: 0.33833
+[sco.] train_ref_acc: 0.01626
+[sco.] train_obj_acc: 0.72079
+[sco.] train_pos_ratio: 0.18557, train_neg_ratio: 0.41199
+[sco.] train_iou_rate_0.25: 0.0338, train_iou_rate_0.5: 0.0051
+[info] mean_fetch_time: 0.52755s
+[info] mean_forward_time: 0.29819s
+[info] mean_backward_time: 0.37421s
+[info] mean_eval_time: 0.0292s
+[info] mean_iter_time: 1.22915s
+[info] ETA: 0h 5m 13s
+
+saving last models...
+
+epoch 3 starting...
+
+-------------------------------iter: [3: 110/255]-------------------------------
+[loss] train_loss: 19.1653
+[loss] train_ref_loss: 4.95602
+[loss] train_lang_loss: 1.98552
+[loss] train_objectness_loss: 0.15784
+[loss] train_vote_loss: 0.64984
+[loss] train_box_loss: 0.36327
+[loss] train_lang_acc: 0.38477
+[sco.] train_ref_acc: 0.01758
+[sco.] train_obj_acc: 0.74187
+[sco.] train_pos_ratio: 0.19872, train_neg_ratio: 0.40031
+[sco.] train_iou_rate_0.25: 0.0332, train_iou_rate_0.5: 0.00195
+[info] mean_fetch_time: 0.59645s
+[info] mean_forward_time: 0.29427s
+[info] mean_backward_time: 0.37093s
+[info] mean_eval_time: 0.02842s
+[info] mean_iter_time: 1.29007s
+[info] ETA: 0h 5m 19s
+
+
+-------------------------------iter: [3: 120/255]-------------------------------
+[loss] train_loss: 18.852
+[loss] train_ref_loss: 4.86491
+[loss] train_lang_loss: 1.96251
+[loss] train_objectness_loss: 0.15552
+[loss] train_vote_loss: 0.63675
+[loss] train_box_loss: 0.36041
+[loss] train_lang_acc: 0.38802
+[sco.] train_ref_acc: 0.02083
+[sco.] train_obj_acc: 0.74332
+[sco.] train_pos_ratio: 0.19892, train_neg_ratio: 0.40223
+[sco.] train_iou_rate_0.25: 0.04774, train_iou_rate_0.5: 0.01042
+[info] mean_fetch_time: 0.5562s
+[info] mean_forward_time: 0.29382s
+[info] mean_backward_time: 0.37069s
+[info] mean_eval_time: 0.02839s
+[info] mean_iter_time: 1.2491s
+[info] ETA: 0h 4m 55s
+
+
+-------------------------------iter: [3: 130/255]-------------------------------
+[loss] train_loss: 18.65728
+[loss] train_ref_loss: 4.81136
+[loss] train_lang_loss: 1.91141
+[loss] train_objectness_loss: 0.15333
+[loss] train_vote_loss: 0.63513
+[loss] train_box_loss: 0.35691
+[loss] train_lang_acc: 0.40123
+[sco.] train_ref_acc: 0.02288
+[sco.] train_obj_acc: 0.74802
+[sco.] train_pos_ratio: 0.19802, train_neg_ratio: 0.40445
+[sco.] train_iou_rate_0.25: 0.05022, train_iou_rate_0.5: 0.01228
+[info] mean_fetch_time: 0.54306s
+[info] mean_forward_time: 0.2937s
+[info] mean_backward_time: 0.37071s
+[info] mean_eval_time: 0.02842s
+[info] mean_iter_time: 1.23589s
+[info] ETA: 0h 4m 39s
+
+
+-------------------------------iter: [3: 140/255]-------------------------------
+[loss] train_loss: 18.45532
+[loss] train_ref_loss: 4.7899
+[loss] train_lang_loss: 1.85289
+[loss] train_objectness_loss: 0.15186
+[loss] train_vote_loss: 0.63085
+[loss] train_box_loss: 0.35187
+[loss] train_lang_acc: 0.41776
+[sco.] train_ref_acc: 0.02426
+[sco.] train_obj_acc: 0.75053
+[sco.] train_pos_ratio: 0.19939, train_neg_ratio: 0.40251
+[sco.] train_iou_rate_0.25: 0.0551, train_iou_rate_0.5: 0.0148
+[info] mean_fetch_time: 0.53214s
+[info] mean_forward_time: 0.29361s
+[info] mean_backward_time: 0.37077s
+[info] mean_eval_time: 0.02839s
+[info] mean_iter_time: 1.22491s
+[info] ETA: 0h 4m 23s
+
+
+-------------------------------iter: [3: 150/255]-------------------------------
+[loss] train_loss: 18.33371
+[loss] train_ref_loss: 4.77261
+[loss] train_lang_loss: 1.81939
+[loss] train_objectness_loss: 0.15167
+[loss] train_vote_loss: 0.62895
+[loss] train_box_loss: 0.34877
+[loss] train_lang_acc: 0.42285
+[sco.] train_ref_acc: 0.02767
+[sco.] train_obj_acc: 0.7497
+[sco.] train_pos_ratio: 0.20199, train_neg_ratio: 0.39866
+[sco.] train_iou_rate_0.25: 0.05729, train_iou_rate_0.5: 0.01497
+[info] mean_fetch_time: 0.52643s
+[info] mean_forward_time: 0.29327s
+[info] mean_backward_time: 0.3707s
+[info] mean_eval_time: 0.02843s
+[info] mean_iter_time: 1.21883s
+[info] ETA: 0h 4m 10s
+
+saving last models...
+
+epoch 4 starting...
+
+-------------------------------iter: [4: 160/255]-------------------------------
+[loss] train_loss: 17.18328
+[loss] train_ref_loss: 4.59196
+[loss] train_lang_loss: 1.55879
+[loss] train_objectness_loss: 0.14464
+[loss] train_vote_loss: 0.60466
+[loss] train_box_loss: 0.31723
+[loss] train_lang_acc: 0.47768
+[sco.] train_ref_acc: 0.03125
+[sco.] train_obj_acc: 0.7517
+[sco.] train_pos_ratio: 0.2107, train_neg_ratio: 0.38743
+[sco.] train_iou_rate_0.25: 0.10268, train_iou_rate_0.5: 0.02679
+[info] mean_fetch_time: 0.66527s
+[info] mean_forward_time: 0.29784s
+[info] mean_backward_time: 0.37512s
+[info] mean_eval_time: 0.02856s
+[info] mean_iter_time: 1.36679s
+[info] ETA: 0h 4m 33s
+
+
+-------------------------------iter: [4: 170/255]-------------------------------
+[loss] train_loss: 17.15677
+[loss] train_ref_loss: 4.5705
+[loss] train_lang_loss: 1.58599
+[loss] train_objectness_loss: 0.14256
+[loss] train_vote_loss: 0.60889
+[loss] train_box_loss: 0.31352
+[loss] train_lang_acc: 0.45864
+[sco.] train_ref_acc: 0.03493
+[sco.] train_obj_acc: 0.76287
+[sco.] train_pos_ratio: 0.21602, train_neg_ratio: 0.37879
+[sco.] train_iou_rate_0.25: 0.0818, train_iou_rate_0.5: 0.0193
+[info] mean_fetch_time: 0.58941s
+[info] mean_forward_time: 0.29548s
+[info] mean_backward_time: 0.37276s
+[info] mean_eval_time: 0.02847s
+[info] mean_iter_time: 1.28611s
+[info] ETA: 0h 4m 1s
+
+
+-------------------------------iter: [4: 180/255]-------------------------------
+[loss] train_loss: 16.95375
+[loss] train_ref_loss: 4.52401
+[loss] train_lang_loss: 1.52846
+[loss] train_objectness_loss: 0.14093
+[loss] train_vote_loss: 0.60641
+[loss] train_box_loss: 0.30978
+[loss] train_lang_acc: 0.47396
+[sco.] train_ref_acc: 0.03472
+[sco.] train_obj_acc: 0.76325
+[sco.] train_pos_ratio: 0.21585, train_neg_ratio: 0.38031
+[sco.] train_iou_rate_0.25: 0.08565, train_iou_rate_0.5: 0.02083
+[info] mean_fetch_time: 0.55835s
+[info] mean_forward_time: 0.29492s
+[info] mean_backward_time: 0.37228s
+[info] mean_eval_time: 0.02848s
+[info] mean_iter_time: 1.25404s
+[info] ETA: 0h 3m 41s
+
+
+-------------------------------iter: [4: 190/255]-------------------------------
+[loss] train_loss: 16.88941
+[loss] train_ref_loss: 4.50311
+[loss] train_lang_loss: 1.52348
+[loss] train_objectness_loss: 0.1393
+[loss] train_vote_loss: 0.60606
+[loss] train_box_loss: 0.30833
+[loss] train_lang_acc: 0.47677
+[sco.] train_ref_acc: 0.04096
+[sco.] train_obj_acc: 0.76642
+[sco.] train_pos_ratio: 0.21605, train_neg_ratio: 0.38043
+[sco.] train_iou_rate_0.25: 0.09459, train_iou_rate_0.5: 0.02238
+[info] mean_fetch_time: 0.5445s
+[info] mean_forward_time: 0.29467s
+[info] mean_backward_time: 0.37196s
+[info] mean_eval_time: 0.02845s
+[info] mean_iter_time: 1.23958s
+[info] ETA: 0h 3m 25s
+
+
+-------------------------------iter: [4: 200/255]-------------------------------
+[loss] train_loss: 16.70575
+[loss] train_ref_loss: 4.472
+[loss] train_lang_loss: 1.49686
+[loss] train_objectness_loss: 0.13754
+[loss] train_vote_loss: 0.60019
+[loss] train_box_loss: 0.30446
+[loss] train_lang_acc: 0.4877
+[sco.] train_ref_acc: 0.04289
+[sco.] train_obj_acc: 0.77167
+[sco.] train_pos_ratio: 0.21691, train_neg_ratio: 0.37984
+[sco.] train_iou_rate_0.25: 0.10007, train_iou_rate_0.5: 0.02327
+[info] mean_fetch_time: 0.53573s
+[info] mean_forward_time: 0.29506s
+[info] mean_backward_time: 0.37181s
+[info] mean_eval_time: 0.0287s
+[info] mean_iter_time: 1.23131s
+[info] ETA: 0h 3m 11s
+
+saving last models...
+
+epoch 5 starting...
+
+-------------------------------iter: [5: 210/255]-------------------------------
+[loss] train_loss: 15.73892
+[loss] train_ref_loss: 4.17483
+[loss] train_lang_loss: 1.41387
+[loss] train_objectness_loss: 0.12437
+[loss] train_vote_loss: 0.5858
+[loss] train_box_loss: 0.27866
+[loss] train_lang_acc: 0.52604
+[sco.] train_ref_acc: 0.07031
+[sco.] train_obj_acc: 0.78959
+[sco.] train_pos_ratio: 0.21495, train_neg_ratio: 0.39105
+[sco.] train_iou_rate_0.25: 0.16146, train_iou_rate_0.5: 0.04688
+[info] mean_fetch_time: 0.6559s
+[info] mean_forward_time: 0.29336s
+[info] mean_backward_time: 0.37084s
+[info] mean_eval_time: 0.02843s
+[info] mean_iter_time: 1.34853s
+[info] ETA: 0h 3m 22s
+
+
+-------------------------------iter: [5: 220/255]-------------------------------
+[loss] train_loss: 15.66961
+[loss] train_ref_loss: 4.22512
+[loss] train_lang_loss: 1.38402
+[loss] train_objectness_loss: 0.12375
+[loss] train_vote_loss: 0.58094
+[loss] train_box_loss: 0.27699
+[loss] train_lang_acc: 0.52344
+[sco.] train_ref_acc: 0.05859
+[sco.] train_obj_acc: 0.80398
+[sco.] train_pos_ratio: 0.21942, train_neg_ratio: 0.38391
+[sco.] train_iou_rate_0.25: 0.14258, train_iou_rate_0.5: 0.04395
+[info] mean_fetch_time: 0.57995s
+[info] mean_forward_time: 0.29303s
+[info] mean_backward_time: 0.37099s
+[info] mean_eval_time: 0.0286s
+[info] mean_iter_time: 1.27256s
+[info] ETA: 0h 2m 54s
+
+
+-------------------------------iter: [5: 230/255]-------------------------------
+[loss] train_loss: 15.51279
+[loss] train_ref_loss: 4.1838
+[loss] train_lang_loss: 1.39758
+[loss] train_objectness_loss: 0.12114
+[loss] train_vote_loss: 0.57742
+[loss] train_box_loss: 0.27086
+[loss] train_lang_acc: 0.51562
+[sco.] train_ref_acc: 0.05829
+[sco.] train_obj_acc: 0.80506
+[sco.] train_pos_ratio: 0.2216, train_neg_ratio: 0.38291
+[sco.] train_iou_rate_0.25: 0.13882, train_iou_rate_0.5: 0.04447
+[info] mean_fetch_time: 0.55067s
+[info] mean_forward_time: 0.29256s
+[info] mean_backward_time: 0.37056s
+[info] mean_eval_time: 0.02868s
+[info] mean_iter_time: 1.24246s
+[info] ETA: 0h 2m 36s
+
+
+-------------------------------iter: [5: 240/255]-------------------------------
+[loss] train_loss: 15.38398
+[loss] train_ref_loss: 4.16169
+[loss] train_lang_loss: 1.42337
+[loss] train_objectness_loss: 0.12055
+[loss] train_vote_loss: 0.57222
+[loss] train_box_loss: 0.26546
+[loss] train_lang_acc: 0.50564
+[sco.] train_ref_acc: 0.05686
+[sco.] train_obj_acc: 0.80745
+[sco.] train_pos_ratio: 0.22292, train_neg_ratio: 0.37888
+[sco.] train_iou_rate_0.25: 0.1441, train_iou_rate_0.5: 0.04557
+[info] mean_fetch_time: 0.53823s
+[info] mean_forward_time: 0.29281s
+[info] mean_backward_time: 0.37054s
+[info] mean_eval_time: 0.02861s
+[info] mean_iter_time: 1.2302s
+[info] ETA: 0h 2m 22s
+
+
+-------------------------------iter: [5: 250/255]-------------------------------
+[loss] train_loss: 15.3292
+[loss] train_ref_loss: 4.16576
+[loss] train_lang_loss: 1.41281
+[loss] train_objectness_loss: 0.11972
+[loss] train_vote_loss: 0.57198
+[loss] train_box_loss: 0.26291
+[loss] train_lang_acc: 0.50985
+[sco.] train_ref_acc: 0.05605
+[sco.] train_obj_acc: 0.81074
+[sco.] train_pos_ratio: 0.22366, train_neg_ratio: 0.37728
+[sco.] train_iou_rate_0.25: 0.14164, train_iou_rate_0.5: 0.04416
+[info] mean_fetch_time: 0.53181s
+[info] mean_forward_time: 0.29279s
+[info] mean_backward_time: 0.37051s
+[info] mean_eval_time: 0.02873s
+[info] mean_iter_time: 1.22384s
+[info] ETA: 0h 2m 8s
+
+saving last models...
+
+training completed...
+
+--------------------------------------best--------------------------------------
+[best] epoch: 1
+[loss] loss: 28.3338
+[loss] ref_loss: 5.54517
+[loss] lang_loss: 2.74186
+[loss] objectness_loss: 0.19889
+[loss] vote_loss: 0.96466
+[loss] box_loss: 0.64767
+[loss] lang_acc: 0.31078
+[sco.] ref_acc: 0.00262
+[sco.] obj_acc: 0.85342
+[sco.] pos_ratio: 0.09832, neg_ratio: 0.57788
+[sco.] iou_rate_0.25: 0.00231, iou_rate_0.5: 0.0
+
+saving checkpoint...
+
+saving last models...
+

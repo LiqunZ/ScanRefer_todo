@@ -115,7 +115,7 @@ class LanguageGatedBundleMatchModule(nn.Module):
         idx_flat = idx.reshape(B, -1)
         idx_expand = idx_flat.unsqueeze(-1).expand(-1, -1, C)
         gathered = torch.gather(src, 1, idx_expand)
-        return gathered.view(B, N, K, C)
+        return gathered.reshape(B, N, K, C)
 
     @staticmethod
     def _rotate_features(features, theta):
@@ -124,7 +124,7 @@ class LanguageGatedBundleMatchModule(nn.Module):
         B, N, K, C = features.shape
         if K == 0:
             return features
-        feat = features.view(B, N, K, C // 2, 2)
+        feat = features.reshape(B, N, K, C // 2, 2)
         theta = theta.unsqueeze(-1)
         cos_val = torch.cos(theta)
         sin_val = torch.sin(theta)
@@ -133,5 +133,4 @@ class LanguageGatedBundleMatchModule(nn.Module):
         rot_real = real * cos_val - imag * sin_val
         rot_imag = real * sin_val + imag * cos_val
         rotated = torch.stack([rot_real, rot_imag], dim=-1)
-        return rotated.view(B, N, K, C)
-
+        return rotated.reshape(B, N, K, C)

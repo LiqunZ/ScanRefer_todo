@@ -9,13 +9,14 @@ from models.backbone_module import Pointnet2Backbone
 from models.voting_module import VotingModule
 from models.proposal_module import ProposalModule
 from models.lang_module import LangModule
+from models.match_module import MatchModule
 from models.language_gated_bundle_module import LanguageGatedBundleMatchModule
 
 class RefNet(nn.Module):
     def __init__(self, num_class, num_heading_bin, num_size_cluster, mean_size_arr, 
     input_feature_dim=0, num_proposal=128, vote_factor=1, sampling="vote_fps",
     use_lang_classifier=True, use_bidir=False, no_reference=False,
-    emb_size=300, hidden_size=256, bundle_cfg=None):
+    emb_size=300, hidden_size=256, use_bundle_match=True, bundle_cfg=None):
         super().__init__()
 
         self.num_class = num_class
@@ -50,13 +51,24 @@ class RefNet(nn.Module):
 
             # --------- PROPOSAL MATCHING ---------
             # Match the generated proposals and select the most confident ones
-            bundle_kwargs = {
-                "num_proposals": num_proposal,
-                "lang_size": (1 + int(self.use_bidir)) * hidden_size
-            }
+            bundle_kwargs = {}
             if bundle_cfg:
                 bundle_kwargs.update(bundle_cfg)
-            self.match = LanguageGatedBundleMatchModule(**bundle_kwargs)
+            self.use_bundle_match = use_bundle_match
+            if self.use_bundle_match:
+                bundle_kwargs = {
+                    "num_proposals": num_proposal,
+                    "lang_size": (1 + int(self.use_bidir)) * hidden_size
+                }
+                if bundle_cfg:
+                    bundle_kwargs.update(bundle_cfg)
+                self.match = LanguageGatedBundleMatchModule(**bundle_kwargs)
+            else:
+                self.match = MatchModule(
+                    num_proposals=num_proposal,
+                    lang_size=(1 + int(self.use_bidir)) * hidden_size,
+                    hidden_size=bundle_cfg.get("baseline_hidden", 128) if bundle_cfg else 128
+                )
 
     def forward(self, data_dict):
         """ Forward pass of the network

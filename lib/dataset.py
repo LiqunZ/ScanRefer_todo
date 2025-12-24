@@ -401,3 +401,48 @@ class ScannetReferenceDataset(Dataset):
         bbox[:, :3] += factor
 
         return point_set, bbox
+
+
+def build_overfit_loader(args, split="train", max_scenes=1, max_samples=4):
+    """Construct a tiny dataloader over a few ScanRefer samples to overfit quickly.
+
+    This reuses the existing ScannetReferenceDataset but slices the scanrefer list
+    to a very small subset, so training iterations are fast and deterministic.
+    """
+    from lib.config import CONF
+    import json
+    from copy import deepcopy
+
+    scanrefer_train = json.load(open(os.path.join(CONF.PATH.DATA, "ScanRefer_filtered_train.json")))
+    scanrefer_val = json.load(open(os.path.join(CONF.PATH.DATA, "ScanRefer_filtered_val.json")))
+
+    if split == "train":
+        src = scanrefer_train
+    else:
+        src = scanrefer_val
+
+    # group by scene
+    scene_to_items = {}
+    for d in src:
+        scene_to_items.setdefault(d["scene_id"], []).append(d)
+
+    # pick a few scenes and a few samples per scene
+    chosen = []
+    for i, (scene_id, items) in enumerate(scene_to_items.items()):
+        if i >= max_scenes:
+            break
+        chosen.extend(items[:max_samples])
+
+    dataset = ScannetReferenceDataset(
+        scanrefer=chosen,
+        scanrefer_all_scene=list(scene_to_items.keys()),
+        split=split,
+        num_points=args.num_points,
+        use_height=(not args.no_height),
+        use_color=args.use_color,
+        use_normal=args.use_normal,
+        use_multiview=args.use_multiview,
+    )
+
+    loader = DataLoader(dataset, batch_size=min(args.batch_size, len(dataset)), shuffle=True, num_workers=0)
+    return dataset, loader

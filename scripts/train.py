@@ -45,13 +45,16 @@ def get_dataloader(args, scanrefer, all_scene_list, split, config, augment):
 def get_model(args):
     # initiate model
     input_channels = int(args.use_multiview) * 128 + int(args.use_normal) * 3 + int(args.use_color) * 3 + int(not args.no_height)
-    bundle_cfg = {
-        "knn_k": args.bundle_knn,
-        "diffusion_steps": args.bundle_diffusion_steps,
-        "diffusion_alpha": args.bundle_diffusion_alpha,
-        "hidden_size": args.bundle_hidden_size,
-        "hyper_hidden": args.bundle_hyper_hidden
-    }
+    if args.use_bundle_match:
+        bundle_cfg = {
+            "knn_k": args.bundle_knn,
+            "diffusion_steps": args.bundle_diffusion_steps,
+            "diffusion_alpha": args.bundle_diffusion_alpha,
+            "hidden_size": args.bundle_hidden_size,
+            "hyper_hidden": args.bundle_hyper_hidden,
+        }
+    else:
+        bundle_cfg = {"baseline_hidden": args.baseline_hidden_size}
 
     model = RefNet(
         num_class=DC.num_class,
@@ -63,6 +66,7 @@ def get_model(args):
         use_lang_classifier=(not args.no_lang_cls),
         use_bidir=args.use_bidir,
         no_reference=args.no_reference,
+        use_bundle_match=args.use_bundle_match,
         bundle_cfg=bundle_cfg
     )
 
@@ -270,6 +274,8 @@ if __name__ == "__main__":
     parser.add_argument("--bundle_diffusion_alpha", type=float, default=0.5, help="Residual weight for diffusion update")
     parser.add_argument("--bundle_hidden_size", type=int, default=128, help="Hidden size for bundle projection head")
     parser.add_argument("--bundle_hyper_hidden", type=int, default=128, help="Hidden size for hyper-network")
+    parser.add_argument("--use_bundle_match", action="store_true", help="Toggle Language-Gated bundle matcher; default uses baseline match module.")
+    parser.add_argument("--baseline_hidden_size", type=int, default=128, help="Hidden size for the baseline MatchModule when bundle matcher is disabled.")
     args = parser.parse_args()
 
     # setting
